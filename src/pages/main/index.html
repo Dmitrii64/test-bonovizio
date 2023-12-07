@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <title>Главная</title>
+</head>
+
+<body>
+  @@include('header/index.html')
+  <main>
+    <section class="poster">
+      <div class="container">
+        <div class="poster__wrapper">
+          <div class="poster__content">
+            <span class="poster__subtitle">Конференция</span>
+            <time class="poster__date" datetime="2023-11-12">12 ноября</time>
+            <h1 class="poster__title">This year next year</h1>
+            <ul class="poster__partners">
+              <li class="poster__partner poster__partner--group"></li>
+              <li class="poster__partner poster__partner--mindshare"></li>
+              <li class="poster__partner poster__partner--mediacom"></li>
+              <li class="poster__partner poster__partner--wavemaker"></li>
+            </ul>
+            <button class="poster__button button" type="button">зарегистрироваться</button>
+          </div>
+          <img class="poster__image" src="/static/images/poster.svg" alt="" width="237" height="215">
+        </div>
+        <p class="poster__text">Команда рекламного холдинга GroupM рада
+          открыть для вас двери digital-конференции NextM!</p>
+        <p class="poster__info">NextM – это ежегодная digital-конференция,
+          организованная ведущей международной рекламной группой GroupM, входящей в состав коммуникационного холдинга
+          WPP и представленной в России агентствами Mindshare, MediaCom и Wavemaker.</p>
+        <button class="poster__arrow" type="button"></button>
+    </section>
+    <section class="speakers container">
+      <h2 class="speakers__title">Спикеры</h2>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper speakers-swiper speakers__swiper">
+        <ul class="speakers__list swiper-wrapper">
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+          <li class="swiper-slide speaker">
+            <img class="speaker__image" src="/static/images/speaker.png" alt="">
+            <div class="speaker__info">
+              <h3 class="speaker__name">Ярон Фаризон</h3>
+              <p class="speaker__position">CEO MediaCom</p>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <h2 class="contact__title">Отправить сообщение</h2>
+        <form class="contact__form">
+          <input type="text" placeholder="Ваше имя" name="name" class="form-value">
+          <input type="email" placeholder="Email" name="email" class="form-value">
+          <textarea placeholder="Ваше сообщение" name="text" class="form-value"></textarea>
+          <button class="button contact__button">отправить</button>
+        </form>
+        <div class="contact__info">
+          <a class="contact__text" href="mailto:info@groupmnextm.ru">info@groupmnextm.ru</a>
+          <a class="contact__text" href="tel:+74956414080">+7 (495) 641-40-80</a>
+          <a class="contact__text contact__text--privacy" href="#">Правовая информация</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

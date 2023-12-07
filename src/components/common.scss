@@ -1,0 +1,125 @@
+@import "mixins";
+
+$font-default: "Helvetica Neue", "Helvetica", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-default;
+  @include font-size(18px, 24px);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #0A2756;
+  text-decoration: none;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #fff;
+  @include font-size(18px, 25px);
+  padding: 13px 19px;
+  border: 3px solid transparent;
+  margin-bottom: 25px;
+  resize: none;
+  outline: none;
+
+  &.invalid {
+    border: 3px solid #FB5555;
+  }
+}
+
+input {
+  @media (min-width: 768px) {
+    width: 47.4%;
+  }
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 70px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    top: 341px;
+    width: 28px;
+    height: 85px;
+    margin-top: 0;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-image: url('/static/images/swiper-arrow.svg');
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: -28px;
+}
+
+.swiper-button-next {
+  right: -28px;
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  margin: 48px auto 0;
+  transform: translateX(0) !important;
+}
+
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+
+  @media (min-width: 768px) {
+    margin: 0 15px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #0A2756;
+}
+
+// Подключение компонентов
+
+@import "./header/header";
+@import "./buttons/buttons";

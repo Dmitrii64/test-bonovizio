@@ -1,0 +1,39 @@
+.button {
+  display: inline-block;
+  min-width: max-content;
+  height: fit-content;
+  font-size: 14px;
+  line-height: calc(19/14);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 25px;
+  background-color: #007DFE;
+  color: #FFF;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: #FFB32C;
+  }
+
+  &--header {
+    font-size: 22px;
+    padding: 5px 20px;
+    background-color: transparent;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #007DFE;
+    border: 1px solid #007DFE;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 16px;
+      padding: 8px 30px;
+    }
+  }
+}

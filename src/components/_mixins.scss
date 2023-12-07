@@ -1,0 +1,4 @@
+@mixin font-size($s1, $s2) {
+  font-size: $s1;
+  line-height: calc($s2/$s1);
+}
